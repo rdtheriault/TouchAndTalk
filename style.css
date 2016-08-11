@@ -1,0 +1,47 @@
+body 
+{
+    display: table-cell;
+    vertical-align: middle;
+}
+html, body 
+{
+   height: 100%;
+}
+html 
+{
+    display: table;
+    margin: auto;
+}
+.button, .up, .down, .right, .left {
+  float:left;
+	width:100px;
+	vertical-align: middle;
+	border: 5px solid white;
+	border-radius: 5px;
+	margin-left:5px;
+	margin-right:5px;
+	text-align:center;
+}
+
+
+.up, .down, .right, .left {
+	height:100%;
+	border: 5px solid black;
+}
+
+.height {
+	height: 100px;
+	vertical-align: middle;
+}
+
+#next {
+	width:100%;
+	background-color:black;
+	color:white;
+	text-align:center;
+	padding:5px;
+}
+
+#c2, #c3, #c4 {
+	display:none;
+}
