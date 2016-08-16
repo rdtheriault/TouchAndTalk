@@ -84,7 +84,7 @@ $(document).ready(function() {
 		var catIDa = catID.concat(count);
 		var rowIDa = rowID.concat(count);
 		$(rowIDa).hide();
-		$(catIDa).css("border-color", "white");
+		$(catIDa).css("border-color", "black");
 	}
     
     //Builds the ID of the audio file from direction sent by clicking or using arrow keys and global variable counter. Then plays corresponding audio.
