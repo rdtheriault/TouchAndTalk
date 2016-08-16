@@ -1,51 +1,51 @@
 $(document).ready(function() {
 
     var counter = parseInt("1");
-	  var catID = "#btn";
-	  var rowID = "#c";	
+	var catID = "#btn";
+	var rowID = "#c";	
     
     $(document).keydown(function(e){//space
     	if (e.keyCode == 32 ) {
-          change("next");
+            change("next");
     	}
     });
     
     $(document).keydown(function(e){//up
 	    if (e.keyCode == 38 ) {
 	      play("up"); 
-	     }         
+	      }         
 	});
 	$(document).keydown(function(e){//down
 	    if (e.keyCode == 40 ) {
 	      play( "down" );  
-	     }        
+	      }        
 	});
 	$(document).keydown(function(e){//right
 	    if (e.keyCode == 39 ) {
 	      play("right"); 
-	     }         
+	      }         
 	});
 	$(document).keydown(function(e){//left
 	    if (e.keyCode == 37 ) {
 	      play( "left" );  
-	     }        
+	      }        
 	});
     
     $("#next").click(function(){
-        change("next");
+            change("next");
     });
     
     $("#btn1").click(function(){
         change(1);
     });
     $("#btn2").click(function(){
-    	  change(2);
+    	change(2);
     });
     $("#btn3").click(function(){
         change(3);
     });
     $("#btn4").click(function(){
-    	  change(4);
+    	change(4);
     });
     
     //listen for button clicks by class (all up,down,left,right) to send to audio function. Exp - all up class buttons send "up" to function
@@ -64,10 +64,10 @@ $(document).ready(function() {
     
     //Changes the viewable buttons (show/hide) and sets global variable counter accordingly.
     function change(count){
-      if (count == "next"){counter++; if (counter === 5){counter = 1;}} //up counter if you have more than 4 categories
-      else {counter = parseInt(count);}
+        if (count == "next"){counter++; if (counter === 5){counter = 1;}} //up counter if you have more than 4 categories
+        else {counter = parseInt(count);}
 		
-      if (counter === 1){updateShow ("1");}else{ updateHide("1");}
+        if (counter === 1){updateShow ("1");}else{ updateHide("1");}
     	if (counter === 2){updateShow ("2");}else{ updateHide("2");}
     	if (counter === 3){updateShow ("3");}else{ updateHide("3");}
     	if (counter === 4){updateShow ("4");}else{ updateHide("4");}
@@ -92,53 +92,53 @@ $(document).ready(function() {
         var audio;
         var id = dir.concat(counter);
         switch(id){
-      case "up1":
-                audio = new Audio('files/yes.mp3');
+            case "up1":
+                audio = new Audio('files/happy.mp3');
                 break;
-      case "down1":
-                audio = new Audio('files/test.mp3');
+            case "down1":
+                audio = new Audio('files/sad.mp3');
                 break;
 			case "right1":
-                audio = new Audio('files/test.mp3');
+                audio = new Audio('files/upset.mp3');
                 break;
             case "left1":
-                audio = new Audio('files/test.mp3');
+                audio = new Audio('files/notwell.mp3');
                 break;
 			case "up2":
-                audio = new Audio('files/no.mp3');
+                audio = new Audio('files/a.mp3');
                 break;
             case "down2":
-                audio = new Audio('files/test.mp3');
+                audio = new Audio('files/b.mp3');
                 break;
 			case "right2":
-                audio = new Audio('files/test.mp3');
+                audio = new Audio('files/c.mp3');
                 break;
             case "left2":
-                audio = new Audio('files/test.mp3');
+                audio = new Audio('files/d.mp3');
                 break;
 			case "up3":
-                audio = new Audio('files/test.mp3');
+                audio = new Audio('files/needrestroom.mp3');
                 break;
             case "down3":
-                audio = new Audio('files/test.mp3');
+                audio = new Audio('files/needdrink.mp3');
                 break;
 			case "right3":
-                audio = new Audio('files/test.mp3');
+                audio = new Audio('files/needbreak.mp3');
                 break;
             case "left3":
-                audio = new Audio('files/test.mp3');
+                audio = new Audio('files/ineedhelp.mp3');
                 break;	
-			case "up4":
-                audio = new Audio('files/test.mp3');
+	    case "up4":
+                audio = new Audio('files/yestrue.mp3');
                 break;
             case "down4":
-                audio = new Audio('files/test.mp3');
+                audio = new Audio('files/nofalse.mp3');
                 break;
-			case "right4":
-                audio = new Audio('files/test.mp3');
+	    case "right4":
+                audio = new Audio('files/thankyou.mp3');
                 break;
             case "left4":
-                audio = new Audio('files/test.mp3');
+                audio = new Audio('files/idontknow.mp3');
                 break;
         }
         audio.play();
